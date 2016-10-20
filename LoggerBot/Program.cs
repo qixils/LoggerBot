@@ -22,7 +22,8 @@ namespace LoggerBot
 
             _client.MessageReceived += (s, e) =>
             {
-                using (StreamWriter text = File.AppendText($"\\logs\\{e.Server.Id}-chatlog.txt"))
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                using (StreamWriter text = File.AppendText($"{path}\\LoggerBot-Logs\\{e.Server.Id}-chatlog.txt"))
                 {
                     text.WriteLine($"{e.User.Name} ({e.User.Id}) in #{e.Channel.Name} ({e.Channel.Id}) on {e.Server.Name} ({e.Server.Id}): {e.Message.RawText}");    //log msg to txt file
                     Console.WriteLine($"{e.User.Name} ({e.User.Id}) in #{e.Channel.Name} ({e.Channel.Id}) on {e.Server.Name} ({e.Server.Id}): {e.Message.RawText}"); //log msg to console
