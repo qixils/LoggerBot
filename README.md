@@ -2,7 +2,7 @@
 Simple bot for discord that logs messages to a txt file.
 
 #Setting up the bot
-0. Download the files from this repository and extract them into a folder.
+0. [Download the repository](https://github.com/Noahkiq/LoggerBot/archive/master.zip) and extract the zip into a folder.
 
 1. Create a bot [here](https://discordapp.com/developers/applications/me/create) and add it to your server. (Use this link - https://discordapp.com/oauth2/authorize?client_id=CLIENT-ID&scope=bot - but relace "CLIENT-ID" with the client ID found on your bot's application page.)
 
