@@ -22,12 +22,16 @@ namespace LoggerBot
 
             _client.MessageReceived += (s, e) =>
             {
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                using (StreamWriter text = File.AppendText($"{path}\\LoggerBot-Logs\\{e.Server.Id}-chatlog.txt"))
+                /*string mydocuments = $"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}";
+                string path = mydocuments + @"\LoggerBot-Logs";
+                string logpath = $"{path}\\{e.Server.Id}-chatlog.txt";
+                DirectoryInfo di = Directory.CreateDirectory(path);
+                File.Create(logpath);*/
+                using (StreamWriter text = File.AppendText($"{e.Server.Id}-chatlog.txt"))
                 {
                     text.WriteLine($"{e.User.Name} ({e.User.Id}) in #{e.Channel.Name} ({e.Channel.Id}) on {e.Server.Name} ({e.Server.Id}): {e.Message.RawText}");    //log msg to txt file
-                    Console.WriteLine($"{e.User.Name} ({e.User.Id}) in #{e.Channel.Name} ({e.Channel.Id}) on {e.Server.Name} ({e.Server.Id}): {e.Message.RawText}"); //log msg to console
                 }
+                Console.WriteLine($"{e.User.Name} ({e.User.Id}) in #{e.Channel.Name} ({e.Channel.Id}) on {e.Server.Name} ({e.Server.Id}): {e.Message.RawText}");     //log msg to console
             };
 
             string token = File.ReadAllText("token.txt");

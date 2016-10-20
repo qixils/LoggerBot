@@ -15,6 +15,6 @@ Simple bot for discord that logs messages to a txt file.
 5. Click the start button at the top of the screen. (or look at this screenshot if you can't find it)
 ![start-button.png](http://i.imgur.com/grmqm0n.png)
 
-The bot should now open and start logging messages to the `LoggerBot-Logs` folder in your `My Documents` folder.
+The bot should now open and start logging messages to `[root]/LoggerBot/bin/Debug/`, with the filename being `(server id)-chatlog.txt`
 
 To run the bot again if it closes, you can run the bot's executable at `[root]/LoggerBot/bin/Debug/LoggerBot.exe`
