@@ -29,7 +29,7 @@ namespace LoggerBot
                 File.Create(logpath);*/
                 using (StreamWriter text = File.AppendText($"{e.Server.Id}-chatlog.txt"))
                 {
-                    text.WriteLine($"{e.User.Name} ({e.User.Id}) in #{e.Channel.Name} ({e.Channel.Id}) on {e.Server.Name} ({e.Server.Id}): {e.Message.RawText}");    //log msg to txt file
+                    text.WriteLine($"{e.User.Name} ({e.User.Id}) in #{e.Channel.Name} ({e.Channel.Id}): {e.Message.RawText}");    //log msg to txt file
                 }
                 Console.WriteLine($"{e.User.Name} ({e.User.Id}) in #{e.Channel.Name} ({e.Channel.Id}) on {e.Server.Name} ({e.Server.Id}): {e.Message.RawText}");     //log msg to console
             };
