@@ -10,6 +10,7 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 token.txt
+*-chatlog.txt
 
 # Build results
 [Dd]ebug/
