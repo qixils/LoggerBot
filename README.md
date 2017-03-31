@@ -21,23 +21,18 @@ The bot should now open and start logging messages to console and `[root]/Logger
 
 To run the bot again if it closes, you can run the bot's executable at `[root]/LoggerBot/bin/Debug/LoggerBot.exe`
 
-## Mac OS X / Linux / Alt. Windows
+## Mac OS X / Linux
 
-The Mac OS X/Linux steps haven't been proven to work, so if someone can confirm they don't work, please open an issue saying what part doesn't work.
+1. Follow the Windows steps 1-3.
 
-1. For Mac OS X, [download Wine](https://dl.winehq.org/wine-builds/macosx/i686/winehq-devel-1.9.21.pkg).
-For Linux, you'll have to find the appropriate version of Wine for your distro [here](https://www.winehq.org/download).
-For Windows, don't worry about this step.
+2. Download and install [Mono](http://www.mono-project.com/download/).
 
-2. Download the latest version of LoggerBot from [here](https://github.com/Noahkiq/LoggerBot/releases/latest) and place it in a special folder.
+3. Go into your terminal and enter the root directory of the folder you extracted.
 
-3. Create a bot [here](https://discordapp.com/developers/applications/me/create) and add it to your server. (Use this link - https://discordapp.com/oauth2/authorize?client_id=CLIENT-ID&scope=bot - but relace "CLIENT-ID" with the client ID found on your bot's application page.)
+4. Run the command `xbuild` in your terminal.
 
-4. Create a `token.txt` file, put your bot's token in it, and put the file in the same folder as the `LoggerBot.exe` file from earlier.
+5. Run the command `cd LoggerBot/bin/Debug/` to enter the directory of the builds, then run `mono LoggerBot.exe` to run the bot.
 
-5. For Mac OS X and Linux, open the `LoggerBot.exe` file in Wine.
-For Windows, just run the file normally.
+The bot should now open and start logging messages to console and `[root]/LoggerBot/bin/Debug/`, with the filename being `(server id)-chatlog.txt`
 
-The bot should now open and start logging messages to console and the same folder you put `LoggerBot.exe`, with the filename being `(server id)-chatlog.txt`
-
-If you need to re-open the bot and you somehow don't know what to do, just do step 5 again.
+To re-open the bot, follow steps 3 & 5.
